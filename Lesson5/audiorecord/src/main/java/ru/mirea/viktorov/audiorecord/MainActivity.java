@@ -72,15 +72,6 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == REQUEST_CODE_PERMISSION) {
-            isWork = grantResults.length > 0
-                    && grantResults[0] == PackageManager.PERMISSION_GRANTED;
-        }
-    }
-
     public void onClickStartRecord(View view) {
         try {
             btnStartRecord.setEnabled(false);

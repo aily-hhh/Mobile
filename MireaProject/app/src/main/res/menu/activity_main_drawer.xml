@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_bicycles"
+            android:icon="@drawable/ic_menu_bicycles"
+            android:title="Велосипеды" />
+        <item
+            android:id="@+id/nav_browser"
+            android:icon="@drawable/ic_menu_browser"
+            android:title="Браузер" />
+        <item
+            android:id="@+id/nav_work_manager"
+            android:icon="@drawable/ic_menu_workmanager"
+            android:title="WorkManager" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_menu_person"
+            android:title="Профиль"/>
+        <item
+            android:id="@+id/nav_hardware"
+            android:icon="@drawable/ic_menu_hardware"
+            android:title="Освещенность"/>
+        <item
+            android:id="@+id/nav_record"
+            android:icon="@drawable/ic_menu_record"
+            android:title="Микрофон"/>
+        <item
+            android:id="@+id/nav_files"
+            android:icon="@drawable/ic_menu_files"
+            android:title="Файлы"/>
+    </group>
+</menu>

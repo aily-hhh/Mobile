@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="16dp"
+    android:id="@+id/fragment_new_files"
+    tools:context=".ui.files.NewFileFragment">
+
+    <EditText
+        android:id="@+id/txtTitleFile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Заголовок"
+        android:layout_marginVertical="8dp"
+        android:textSize="18.dp" />
+
+    <EditText
+        android:id="@+id/txtDescriptionFile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Текст"
+        android:minLines="6"
+        android:layout_marginBottom="8dp"
+        android:textSize="14.dp" />
+
+    <Button
+        android:id="@+id/btnSaveFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Сохранить"
+        android:layout_gravity="center" />
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_bicycles">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="ru.mirea.viktorov.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="ru.mirea.viktorov.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="ru.mirea.viktorov.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_bicycles"
+        android:name="ru.mirea.viktorov.ui.bicycles.DataFragment"
+        android:label="Велосипеды"
+        tools:layout="@layout/fragment_data" />
+
+    <fragment
+        android:id="@+id/nav_browser"
+        android:name="ru.mirea.viktorov.ui.webView.WebViewFragment"
+            android:label="Браузер"
+        tools:layout="@layout/fragment_web_view" />
+    <fragment
+        android:id="@+id/nav_work_manager"
+        android:name="ru.mirea.viktorov.ui.workManager.WorkManagerFragment"
+        android:label="fragment_work_manager"
+        tools:layout="@layout/fragment_work_manager" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="ru.mirea.viktorov.ui.profile.ProfileFragment"
+        android:label="Профиль"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/nav_hardware"
+        android:name="ru.mirea.viktorov.ui.hardware.HardwareFragment"
+        android:label="Освещенность"
+        tools:layout="@layout/fragment_hardware" />
+    <fragment
+        android:id="@+id/nav_record"
+        android:name="ru.mirea.viktorov.ui.record.RecordFragment"
+        android:label="Микрофон"
+        tools:layout="@layout/fragment_record" />
+    <fragment
+        android:id="@+id/nav_files"
+        android:name="ru.mirea.viktorov.ui.files.FilesFragment"
+        android:label="Файлы"
+        tools:layout="@layout/fragment_files" >
+        <action
+            android:id="@+id/action_nav_files_to_newFileFragment"
+            app:destination="@id/newFileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newFileFragment"
+        android:name="ru.mirea.viktorov.ui.files.NewFileFragment"
+        android:label="Новый файл"
+        tools:layout="@layout/fragment_new_file" >
+        <action
+            android:id="@+id/action_newFileFragment_to_nav_files"
+            app:destination="@id/nav_files" />
+    </fragment>
+</navigation>

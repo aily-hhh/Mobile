@@ -34,7 +34,6 @@ import ru.mirea.viktorov.camera.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     private static final int REQUEST_CODE_PERMISSION = 100;
-    private static final int CAMERA_REQUEST = 0;
     private boolean isWork = false;
     private Uri imageUri;
     private ActivityMainBinding binding;
@@ -103,17 +102,6 @@ public class MainActivity extends AppCompatActivity {
         String imageFileName = "IMAGE_" + timeStamp + "_";
         File storageDirectory = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
         return File.createTempFile(imageFileName, ".jpg", storageDirectory);
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        // производится проверка полученного результата от пользователя на запрос разрешения Camera
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == REQUEST_CODE_PERMISSION) {
-            // permission granted
-            isWork = grantResults.length > 0
-                    && grantResults[0] == PackageManager.PERMISSION_GRANTED;
-        }
     }
 
 }
