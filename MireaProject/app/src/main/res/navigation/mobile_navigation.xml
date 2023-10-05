@@ -72,4 +72,9 @@
             android:id="@+id/action_newFileFragment_to_nav_files"
             app:destination="@id/nav_files" />
     </fragment>
+    <fragment
+        android:id="@+id/nav_task_1"
+        android:name="ru.mirea.viktorov.ui.task_1.Task_1_Fragment"
+        android:label="@string/menu_task_1"
+        tools:layout="@layout/fragment_task_1" />
 </navigation>
